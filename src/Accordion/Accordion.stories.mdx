@@ -1,0 +1,166 @@
+import { Meta } from '@storybook/addon-docs';
+import Accordion from './Accordion';
+import Panel from './Panel';
+import Button from '../Button';
+
+<Meta title='Accordion' component={Accordion} />
+
+```jsx
+import Accordion from 'sushiweb/core/Accordion';
+import Panel from 'sushiweb/core/Panel';
+```
+
+### Basic
+
+<br />
+<Accordion sidePadding={'1.2rem'}>
+  <Panel title='Panel 1' subTitle='Bangalore, India'>
+    <div>
+      <p>
+        That box? i can fit in that box sit in box. When owners are asleep, cry
+        for no apparent reason push your water glass on the floor immediately
+        regret falling into bathtub. Always hungry poop on grasses or need to
+        chase tail russian blue. I heard this rumor where the humans are our
+        owners, pfft, what do they know?! shove bum in owner's face like camera
+        lens meow caticus cuteicus yet i can haz my cat stared at me he was
+        sipping his tea, too for i cry and cry and cry unless you pet me, and
+        then maybe i cry just for fun.
+      </p>
+      <Button size='large' color='red'>
+        Large Button
+      </Button>
+    </div>
+  </Panel>
+  <Panel title='Panel 2'>
+    <div>
+      <p>
+        That box? i can fit in that box sit in box. When owners are asleep, cry
+        for no apparent reason push your water glass on the floor immediately
+        regret falling into bathtub. Always hungry poop on grasses or need to
+        chase tail russian blue. I heard this rumor where the humans are our
+        owners, pfft, what do they know?! shove bum in owner's face like camera
+        lens meow caticus cuteicus yet i can haz my cat stared at me he was
+        sipping his tea, too for i cry and cry and cry unless you pet me, and
+        then maybe i cry just for fun.
+      </p>
+      <Button size='large' color='red'>
+        Large Button
+      </Button>
+    </div>
+  </Panel>
+  <Panel title='Panel 3' disabled>
+    <div>
+      <p>
+        That box? i can fit in that box sit in box. When owners are asleep, cry
+        for no apparent reason push your water glass on the floor immediately
+        regret falling into bathtub. Always hungry poop on grasses or need to
+        chase tail russian blue. I heard this rumor where the humans are our
+        owners, pfft, what do they know?! shove bum in owner's face like camera
+        lens meow caticus cuteicus yet i can haz my cat stared at me he was
+        sipping his tea, too for i cry and cry and cry unless you pet me, and
+        then maybe i cry just for fun.
+      </p>
+      <Button size='large' color='red'>
+        Large Button
+      </Button>
+    </div>
+  </Panel>
+</Accordion>
+
+```jsx
+<Accordion sidePadding={'1.2rem'}>
+  <Panel title='Panel 1' subTitle='Bangalore,India'>
+    <div>
+      <p>
+        That box? i can fit in that box sit in box. When owners are asleep, cry
+        for no apparent reason push your water glass on the floor immediately
+        regret falling into bathtub. Always hungry poop on grasses or need to
+        chase tail russian blue. I heard this rumor where the humans are our
+        owners, pfft, what do they know?! shove bum in owner's face like camera
+        lens meow caticus cuteicus yet i can haz my cat stared at me he was
+        sipping his tea, too for i cry and cry and cry unless you pet me, and
+        then maybe i cry just for fun.
+      </p>
+      <Button size='large' color='red'>
+        Large Button
+      </Button>
+    </div>
+  </Panel>
+  <Panel title='Panel 2'>
+    <div>
+      <p>
+        That box? i can fit in that box sit in box. When owners are asleep, cry
+        for no apparent reason push your water glass on the floor immediately
+        regret falling into bathtub. Always hungry poop on grasses or need to
+        chase tail russian blue. I heard this rumor where the humans are our
+        owners, pfft, what do they know?! shove bum in owner's face like camera
+        lens meow caticus cuteicus yet i can haz my cat stared at me he was
+        sipping his tea, too for i cry and cry and cry unless you pet me, and
+        then maybe i cry just for fun.
+      </p>
+      <Button size='large' color='red'>
+        Large Button
+      </Button>
+    </div>
+  </Panel>
+  <Panel title='Panel 3' disabled>
+    <div>
+      <p>
+        That box? i can fit in that box sit in box. When owners are asleep, cry
+        for no apparent reason push your water glass on the floor immediately
+        regret falling into bathtub. Always hungry poop on grasses or need to
+        chase tail russian blue. I heard this rumor where the humans are our
+        owners, pfft, what do they know?! shove bum in owner's face like camera
+        lens meow caticus cuteicus yet i can haz my cat stared at me he was
+        sipping his tea, too for i cry and cry and cry unless you pet me, and
+        then maybe i cry just for fun.
+      </p>
+      <Button size='large' color='red'>
+        Large Button
+      </Button>
+    </div>
+  </Panel>
+</Accordion>
+```
+
+### Compact
+
+<br />
+<Accordion appearance='compact'>
+  <Panel title={'title'} subTitle={'subTitle'}>
+    {
+      'That box? i can fit in that box sit in box. When owners are asleep, cry for no apparent reason push your water glass on the floor immediately regret falling into bathtub. Always hungry poopon grasses or ne'
+    }
+  </Panel>
+</Accordion>
+
+```jsx
+<Accordion appearance='compact'>
+  <Panel title={'title'} subTitle={'subTitle'}>
+    That box? i can fit in that box sit in box. When owners are asleep, cry for
+    no apparent reason push your water glass on the floor immediately regret
+    falling into bathtub. Always hungry poopon grasses or ne
+  </Panel>
+</Accordion>
+```
+
+### Slim
+
+<br />
+<Accordion appearance='slim'>
+  <Panel title={'title'} subTitle={'subTitle'}>
+    That box? i can fit in that box sit in box. When owners are asleep, cry for
+    no apparent reason push your water glass on the floor immediately regret
+    falling into bathtub. Always hungry poopon grasses or ne'
+  </Panel>
+</Accordion>
+
+```jsx
+<Accordion appearance='slim'>
+  <Panel title={'title'} subTitle={'subTitle'}>
+    That box? i can fit in that box sit in box. When owners are asleep, cry for
+    no apparent reason push your water glass on the floor immediately regret
+    falling into bathtub. Always hungry poopon grasses or ne
+  </Panel>
+</Accordion>
+```
