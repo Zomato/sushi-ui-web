@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 // libraries
 import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
@@ -128,16 +127,16 @@ const Carousel = (props) => {
     setTimeout(() => setDisableBtn(false), 500);
   };
 
-  const onRightClick = (_) => {
+  const onRightClick = () => {
     if (!disableBtn) {
-      const newActive = !!props.slidesToLoad
+      const newActive = props.slidesToLoad
         ? active + 1
         : Math.floor((active + 1) % maxDots);
       clickHandler(newActive, newActive === maxDots ? props.getNext : _noop);
     }
   };
 
-  const onLeftClick = (_) => {
+  const onLeftClick = () => {
     if (!disableBtn) {
       const newActive = Math.ceil(active === 0 ? maxDots - 1 : active - 1);
       clickHandler(
@@ -153,7 +152,7 @@ const Carousel = (props) => {
     setInitialPosition(e.touches[0].pageX);
   };
 
-  const _onTouchEnd = (e) => {
+  const _onTouchEnd = () => {
     setDragging(false);
 
     if (dragTransition < 0 && Math.abs(dragTransition) > width / 10) {
@@ -178,7 +177,7 @@ const Carousel = (props) => {
     }
   };
 
-  const onDotClick = (index) => (e) => {
+  const onDotClick = (index) => () => {
     clickHandler(index);
   };
 
@@ -464,6 +463,7 @@ Carousel.propTypes = {
   arrowInsetPadding: PropTypes.string,
   forceArrowVisible: PropTypes.bool,
   arrowClicked: PropTypes.func,
+  activeRedDots: PropTypes.bool,
 };
 
 Carousel.defaultProps = {

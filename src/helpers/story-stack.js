@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import spacing from '../tokens/spacing';
 
 const alignItems = {
   top: 'flex-start',
@@ -19,13 +18,14 @@ const justifyContent = {
 const StyledStack = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 
   align-items: ${(props) => alignItems[props.alignVertical]};
   justify-content: ${(props) => justifyContent[props.align]};
   line-height: inherit;
   > * {
     flex: ${(props) => (props.align === 'fill' ? 1 : 'none')};
-    margin-right: ${(props) => (props.align === 'fill' ? spacing.xsmall : 0)};
+    margin-top: 0.5rem;
   }
   > *:last-child {
     margin-right: 0;
@@ -73,7 +73,6 @@ Stack.defaultProps = {
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   & > * {
     margin-right: 20px;

@@ -1,0 +1,155 @@
+import { Meta } from '@storybook/addon-docs';
+import Carousel from '../Carousel';
+import ZImage from '../../ZImage';
+import {
+  componentData,
+  componentData2,
+  componentData3,
+  carouselComponent,
+} from './story';
+
+<Meta title='Carousel' component={Carousel} />
+
+```jsx
+import Carousel from 'sushiweb/core/Carousel';
+```
+
+### Basic Carousel (Two images, Single speed)
+
+<br />
+
+<Carousel
+  componentData={componentData}
+  componentToRender={carouselComponent}
+  height='350px'
+  slidesToShow={2}
+  innerMargin={10}
+/>
+
+```jsx
+const componentData = [
+  {
+    src: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg',
+  },
+];
+
+const carouselComponent = ({ src }) => (
+  <ZImage src={src} height='100%' width='100%' ratio={0.5} />
+);
+
+<Carousel
+  componentData={componentData}
+  componentToRender={carouselComponent}
+  height='350px'
+  slidesToShow={2}
+  innerMargin={10}
+/>;
+```
+
+### Two images, Double speed
+
+<br />
+
+<Carousel
+  componentData={componentData}
+  componentToRender={carouselComponent}
+  slidesToShow={2}
+  slidesToScroll={2}
+  height='350px'
+  innerMargin={10}
+/>
+
+```jsx
+const componentData = [
+  {
+    src: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg',
+  },
+];
+
+const carouselComponent = ({ src }) => (
+  <ZImage src={src} height='100%' width='100%' ratio={0.5} />
+);
+
+<Carousel
+  componentData={componentData}
+  componentToRender={carouselComponent}
+  slidesToShow={2}
+  slidesToScroll={2}
+  height='350px'
+  innerMargin={10}
+/>;
+```
+
+### Three images, Single speed
+
+<br />
+
+<Carousel
+  componentData={componentData}
+  componentToRender={carouselComponent}
+  slidesToShow={3}
+  slidesToShowTab={2}
+  slidesToShowMobile={1}
+  isResponsive
+  innerMargin={50}
+/>
+
+```jsx
+const componentData = [
+  {
+    src: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg',
+  },
+];
+
+const carouselComponent = ({ src }) => (
+  <ZImage src={src} height='100%' width='100%' ratio={0.5} />
+);
+
+<Carousel
+  componentData={componentData}
+  componentToRender={carouselComponent}
+  slidesToShow={3}
+  slidesToShowTab={2}
+  slidesToShowMobile={1}
+  isResponsive
+  innerMargin={50}
+/>;
+```
+
+### Autoscroll
+
+<br />
+
+<Carousel
+  componentData={componentData}
+  componentToRender={carouselComponent}
+  slidesToShow={3}
+  slidesToShowTab={2}
+  slidesToShowMobile={1}
+  autoScroll
+  isResponsive
+  innerMargin={10}
+/>
+
+```jsx
+const componentData = [
+  {
+    src: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg',
+  },
+];
+
+const carouselComponent = ({ src }) => (
+  <ZImage src={src} height='100%' width='100%' ratio={0.5} />
+);
+
+<Carousel
+  componentData={componentData}
+  componentToRender={carouselComponent}
+  slidesToShow={3}
+  slidesToShowTab={2}
+  slidesToShowMobile={1}
+  autoScroll
+  isResponsive
+  innerMargin={10}
+/>;
+```
