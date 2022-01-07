@@ -1,12 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react';
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import grey from '../tokens/color/grey';
 import white from '../tokens/color/white';
 import noop from 'lodash-es/noop';
 
 const preloadImg = (src) => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const img = new Image();
 
     img.onload = () => {
@@ -30,21 +30,20 @@ const ZImage = (props) => {
     width = '100%',
     className = '',
     onClick = noop,
-    srcSet = '',
     fallBack = 'https://b.zmtcdn.com/images/placeholder_200.png?output-quality=70',
     isBackground = false,
-    bgGradient = null,
     customZimageComponent = null,
     loadingComponent = null,
     blurred = '',
     noTransform = false,
-    clickable = false,
+    clickable,
   } = props;
   const ref = useRef();
 
   const [imgSrc, setSrc] = useState('');
   // const [imgSrcSet, setImgSrcSet] = useState("");
   const [isImageLoaded, setLoaded] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(false);
   const handleOnImageLoad = () => {
     if (blurred) {
@@ -185,6 +184,7 @@ ZImage.propTypes = {
   loadingComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   noTransform: PropTypes.bool,
   blurred: PropTypes.string,
+  clickable: PropTypes.bool,
 };
 
 const BlurredImg = styled.div`
