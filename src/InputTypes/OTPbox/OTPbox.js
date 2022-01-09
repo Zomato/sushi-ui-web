@@ -54,6 +54,7 @@ const OTPbox = (props) => {
     switch (e.keyCode) {
       case 8: // backspace
         setFocused(index - 1);
+        // eslint-disable-next-line no-case-declarations
         const newValue = { ...inputValue };
         delete newValue[index];
         setValue(newValue);

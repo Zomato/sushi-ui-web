@@ -1,0 +1,97 @@
+import { Meta } from '@storybook/addon-docs';
+import RadioGroup from '../RadioGroup';
+import { RadioGrpWrapper, options, disabledOptions } from './story';
+
+<Meta title='RadioGroup' component={RadioGroup} />
+
+```js
+import RadioGroup from 'sushiweb/core/RadioGroup';
+```
+
+```js
+const options = [
+  {
+    label: 'Spicy',
+    value: 'opt_1',
+  },
+  {
+    label: 'Mild',
+    value: 'opt_2',
+  },
+  {
+    label: 'Bland',
+    value: 'opt_3',
+  },
+];
+
+const disabledOptions = [
+  {
+    label: 'Disabled Option 1',
+    value: 'opt_1',
+    disabled: true,
+  },
+  {
+    label: 'Disabled Option 2',
+    value: 'opt_2',
+    disabled: true,
+  },
+  {
+    label: 'Disabled, Selected Option',
+    value: 'opt_3',
+    disabled: true,
+  },
+];
+
+const RadioGrpWrapper = (props) => {
+  const [selected, setSelected] = useState(props.defaultValue);
+
+  const onChange = (val) => {
+    setSelected(val);
+  };
+  return <RadioGroup {...props} selected={selected} onChange={onChange} />;
+};
+```
+
+### Basic RadioGroup
+
+<br />
+<RadioGrpWrapper options={options} name='group1' />
+
+```jsx
+<RadioGrpWrapper options={options} name='group1' />
+```
+
+### Horizontal RadioGroup
+
+<br />
+<RadioGrpWrapper options={options} name='group2' horizontal />
+
+```jsx
+<RadioGrpWrapper options={options} name='group2' horizontal />
+```
+
+### Radio buttons with default value
+
+<br />
+<RadioGrpWrapper options={options} defaultValue={'opt_2'} name='group3' />
+
+```jsx
+<RadioGrpWrapper options={options} defaultValue={'opt_2'} name='group3' />
+```
+
+### Disabled with default value Radio buttons
+
+<br />
+<RadioGrpWrapper
+  options={disabledOptions}
+  defaultValue={'opt_3'}
+  name='group4'
+/>
+
+```jsx
+<RadioGrpWrapper
+  options={disabledOptions}
+  defaultValue={'opt_3'}
+  name='group4'
+/>
+```

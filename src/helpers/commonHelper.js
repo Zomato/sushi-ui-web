@@ -13,6 +13,19 @@ const cloneChildren = (children, newProps) => {
   return children ? React.cloneElement(children, newProps) : null;
 };
 
+const keyCodes = {
+  13: 'ENTER',
+  37: 'LEFT',
+  38: 'UP',
+  39: 'RIGHT',
+  40: 'DOWN',
+};
+
+const onKeyChoose = (func) => (e) => {
+  const navKey = keyCodes[e.keyCode] || false;
+  if (navKey) func(e, navKey);
+};
+
 const hexToRgb = (hex) => {
   if (!hex) {
     return null;
@@ -58,4 +71,5 @@ export {
   getRGBAFromHex,
   cloneChildren,
   hexToRgb,
+  onKeyChoose,
 };
