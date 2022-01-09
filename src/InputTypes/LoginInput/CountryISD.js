@@ -11,7 +11,6 @@ import NewCountryItem from './components/NewCountryItem';
 import ZImage from '../../ZImage';
 
 const CountryISD = ({
-  country,
   code,
   countries,
   selectCountry,

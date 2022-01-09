@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/addon-docs';
+import Toast from '../Toast';
+import { ToastStory } from './story';
+
+<Meta title='Toast' component={Toast} />
+
+```jsx
+import Toast from 'sushiweb/core/Toast';
+```
+
+<ToastStory />
+
+```js
+const ToastWrapper = (props) => {
+  const [show, setShow] = useState(false);
+  const showToast = () => setShow(true);
+  const handleClose = () => {
+    setShow(false);
+  };
+  return (
+    <>
+      <Button appearance='outline' onClick={showToast}>
+        {props.buttonLabel}
+      </Button>
+      <Toast
+        show={show}
+        align={props.align}
+        onClose={handleClose}
+        text={`This is a sample toast! for type ${props.type || 'default'}`}
+        type={props.type}
+      />
+    </>
+  );
+};
+
+<ToastWrapper buttonLabel='Top' align='top' />
+<ToastWrapper buttonLabel='Top' align='top' type='success' />
+<ToastWrapper buttonLabel='Top' align='top' type='successSolid' />
+<ToastWrapper buttonLabel='Bottom' align='bottom' type='warning' />
+<ToastWrapper buttonLabel='Bottom' align='bottom' type='warningSolid' />
+<ToastWrapper buttonLabel='Bottom' align='bottom' type='error' />
+<ToastWrapper buttonLabel='Bottom' align='bottom' type='errorSolid' />
+<ToastWrapper buttonLabel='Bottom' align='bottom' type='darkDefault' />
+```

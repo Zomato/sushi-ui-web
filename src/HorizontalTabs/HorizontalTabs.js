@@ -112,7 +112,7 @@ HorizontalTabs.bottomBorder = styled.hr`
   }
 `;
 
-HorizontalTabs.Link = (props) => {
+HorizontalTabs.Link = function HorizontalTabsLink(props) {
   const { onClick, active, gap, appearance, isSpaced } = props;
   const handleClick = (event) => {
     event.stopPropagation();
@@ -237,6 +237,8 @@ HorizontalTabs.Link.propTypes = {
   active: PropTypes.bool,
   appearance: PropTypes.oneOf(['default', 'bold']),
   isSpaced: PropTypes.bool,
+  gap: PropTypes.string,
+  children: PropTypes.node,
 };
 
 HorizontalTabs.Link.defaultProps = {

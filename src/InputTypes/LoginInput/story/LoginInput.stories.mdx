@@ -1,0 +1,32 @@
+import { Meta } from '@storybook/addon-docs';
+import LoginInput from '../LoginInput';
+import { LoginInputStory } from './story';
+
+<Meta title='LoginInput' component={LoginInput} />
+
+```jsx
+import LoginInput from 'sushiweb/core/InputTypes/LoginInput';
+```
+
+<LoginInputStory />
+
+```jsx
+<LoginInput
+  version={2}
+  countries={mock}
+  width='400px'
+  placeholder='Email/Phone'
+  fnCountryChange={console.log}
+  defaultIsdCode={91}
+/>
+
+<LoginInput
+  version={2}
+  countries={mock}
+  width='400px'
+  placeholder='Email/Phone'
+  fnCountryChange={console.log}
+  defaultIsdCode={91}
+  autoFocusInput
+/>
+```

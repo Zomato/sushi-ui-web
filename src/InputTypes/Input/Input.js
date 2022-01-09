@@ -45,7 +45,9 @@ const RightLoader = styled.div`
   z-index: 1;
 `;
 
+// eslint-disable-next-line react/display-name
 const Input = React.forwardRef((props, ref) => {
+  console.log(props);
   const [focused, toggleFocus] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const onFocusToggle = (_) => {
@@ -55,6 +57,7 @@ const Input = React.forwardRef((props, ref) => {
 
   const state = getState(props, focused);
   const helperTxt = getHelperText(props.helperText, props.errorMsg);
+  // eslint-disable-next-line no-unused-vars
   const { loading, onChange, ...wrapperProps } = props; // fix: loading property should not be passed to native elemennts
   const inputProps = {
     name: props.name,

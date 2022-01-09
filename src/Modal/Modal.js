@@ -318,6 +318,7 @@ Modal.propTypes = {
   zIndex: PropTypes.number,
   id: PropTypes.string,
   isMobileDialog: PropTypes.bool,
+  autoHeight: PropTypes.string,
 };
 
 Modal.defaultProps = {
@@ -354,6 +355,7 @@ Modal.defaultProps = {
   zIndex: 11,
   id: 'id-' + Math.floor(Math.random() * 100),
   isMobileDialog: false,
+  autoHeight: '',
 };
 
 const getModalWidth = ({ type }) => modalWidth[type];

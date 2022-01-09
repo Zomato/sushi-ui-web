@@ -1,0 +1,251 @@
+import { Meta } from '@storybook/addon-docs';
+import Input from '../Input';
+import StarEmpty from '../../../Icons/all/StarEmpty';
+import SpinnerCircular from '../../../Spinner/SpinnerCircular';
+import { InputWrapper } from './story';
+
+<Meta title='Input' component={Input} />
+
+```jsx
+import Input from 'sushiweb/core/Input';
+
+const InputWrapper = (props) => {
+  const [value, changeValue] = useState(props.value);
+
+  return <Input {...props} onChange={changeValue} value={value} />;
+};
+```
+
+### Basic Input
+
+<br />
+<InputWrapper label='Name' innerWidth='300px' />
+
+```jsx
+<InputWrapper label='Name' innerWidth='300px' />
+```
+
+### Autofocus
+
+<br />
+<InputWrapper label='Name' innerWidth='300px' autoFocus />
+
+```jsx
+<InputWrapper label='Name' innerWidth='300px' autoFocus />
+```
+
+### Different Color
+
+<br />
+<InputWrapper label='Name' innerWidth='300px' borderColor='rebeccapurple' />
+
+```jsx
+<InputWrapper label='Name' innerWidth='300px' borderColor='rebeccapurple' />
+```
+
+### Without Auto complete
+
+<br />
+<InputWrapper label='Name' width='300px' autocomplete={false} />
+
+```jsx
+<InputWrapper label='Name' width='300px' autocomplete={false} />
+```
+
+### With Icon
+
+<br />
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  icon={<StarEmpty />}
+  iconColor='#B5B5B5'
+/>
+
+```jsx
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  icon={<StarEmpty />}
+  iconColor='#B5B5B5'
+/>
+```
+
+### With left icon
+
+<br />
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  leftIcon={<StarEmpty />}
+  leftIconColor='#B5B5B5'
+/>
+
+```jsx
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  leftIcon={<StarEmpty />}
+  leftIconColor='#B5B5B5'
+/>
+```
+
+### With right loader
+
+<br />
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  loader={SpinnerCircular}
+  loaderAlign='right'
+  loaderProps={{ size: 'small', color: '#B5B5B5' }}
+  loading
+/>
+
+```jsx
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  loader={SpinnerCircular}
+  loaderAlign='right'
+  loaderProps={{ size: 'small', color: '#B5B5B5' }}
+  loading
+/>
+```
+
+### With left loader
+
+<br />
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  loader={SpinnerCircular}
+  loaderAlign='left'
+  loaderProps={{ size: 'small', color: '#B5B5B5' }}
+  loading
+/>
+
+```jsx
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  loader={SpinnerCircular}
+  loaderAlign='left'
+  loaderProps={{ size: 'small', color: '#B5B5B5' }}
+  loading
+/>
+```
+
+### With hide label
+
+<br />
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  leftIcon={<StarEmpty />}
+  leftIconColor='#B5B5B5'
+  hideLabel
+/>
+
+```jsx
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  leftIcon={<StarEmpty />}
+  leftIconColor='#B5B5B5'
+  hideLabel
+/>
+```
+
+### With helper text
+
+<br />
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  icon={<StarEmpty />}
+  iconColor='#B5B5B5'
+  helperText='Write your name here'
+/>
+
+```jsx
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  icon={<StarEmpty />}
+  iconColor='#B5B5B5'
+  helperText='Write your name here'
+/>
+```
+
+### With error state
+
+<br />
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  icon={<StarEmpty />}
+  iconColor='#B5B5B5'
+  helperText='Write your name here'
+  errorMsg='This is not right'
+/>
+
+```jsx
+<InputWrapper
+  label='Name'
+  innerWidth='300px'
+  icon={<StarEmpty />}
+  iconColor='#B5B5B5'
+  helperText='Write your name here'
+  errorMsg='This is not right'
+/>
+```
+
+### Disabled State
+
+<br />
+<InputWrapper
+  label='Disabled with helper text'
+  helperText='This is disabled'
+  innerWidth='300px'
+  disabled
+/>
+
+```jsx
+<InputWrapper
+  label='Disabled with helper text'
+  helperText='This is disabled'
+  innerWidth='300px'
+  disabled
+/>
+```
+
+### Disabled State with Icon
+
+<br />
+<InputWrapper
+  disabled
+  label='Disabled with icon'
+  innerWidth='300px'
+  icon={<StarEmpty />}
+  iconColor='#B5B5B5'
+/>
+
+```jsx
+<InputWrapper
+  disabled
+  label='Disabled with icon'
+  innerWidth='300px'
+  icon={<StarEmpty />}
+  iconColor='#B5B5B5'
+/>
+```
+
+### Disabled State with default value
+
+<br />
+<InputWrapper disabled label='Disabled' value='Default Value' width='300px' />
+
+```jsx
+<InputWrapper disabled label='Disabled' value='Default Value' width='300px' />
+```
