@@ -1,4 +1,4 @@
-import { keyframes } from "styled-components";
+import { keyframes } from 'styled-components';
 const fadeinup = keyframes`
   from {
     opacity: 0;

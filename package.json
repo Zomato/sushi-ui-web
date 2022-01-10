@@ -1,7 +1,8 @@
 {
-  "name": "sushi-web-1",
-  "version": "0.1.0",
+  "name": "@sushiweb/core",
+  "version": "1.0.0",
   "private": true,
+  "description": "Zomato's web UI components in react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -20,7 +21,9 @@
     "eslint": "eslint '**/*.js'",
     "format": "prettier \"src/**/*.js\" --write",
     "generate-icons": "node ./buildHelpers/generateSVG.js && npm run format",
-    "build": "npm run generate-icons && babel ./src --out-dir ./dist"
+    "copy": "shx cp package.json dist/",
+    "build": "npm run generate-icons && babel ./src --out-dir ./dist && npm run copy",
+    "publish:npm": "cd ./dist/ && npm publish"
   },
   "eslintConfig": {
     "extends": [
@@ -74,6 +77,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.1.4",
     "prettier": "^2.5.1",
+    "shx": "^0.3.4",
     "storybook-readme": "^5.0.9",
     "strip-html-comments": "^1.0.0",
     "webpack": "^5.65.0"
