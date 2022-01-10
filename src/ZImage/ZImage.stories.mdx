@@ -1,0 +1,64 @@
+import { Meta } from '@storybook/addon-docs';
+import ZImage from './ZImage';
+
+<Meta title='ZImage' component={ZImage} />
+
+```js
+import ZImage from 'sushiweb/core/ZImage';
+```
+
+<ZImage
+  src='https://b.zmtcdn.com/data/pictures/chains/9/18124379/0646ada7b96ba9a57eb7337e7600c7ac.jpg'
+  blurred='https://b.zmtcdn.com/data/pictures/chains/9/18124379/0646ada7b96ba9a57eb7337e7600c7ac.jpg?output-format=webp&fit=around|77.175:41.625&crop=77.175:41.625;*,*'
+  width='400px'
+  height='244px'
+/>
+
+```jsx
+<ZImage
+  src='https://b.zmtcdn.com/data/pictures/chains/9/18124379/0646ada7b96ba9a57eb7337e7600c7ac.jpg'
+  blurred='https://b.zmtcdn.com/data/pictures/chains/9/18124379/0646ada7b96ba9a57eb7337e7600c7ac.jpg?output-format=webp&fit=around|77.175:41.625&crop=77.175:41.625;*,*'
+  width='400px'
+  height='244px'
+/>
+```
+
+<ZImage
+  src='https://b.zmtcdn.com/data/collections/3cdfc1b02649e137de21fdb544e41c38_1536122341.jpg?output-format=webp&output-quality=45'
+  width='400px'
+  height='244px'
+  doPreload
+/>
+
+```jsx
+<ZImage
+  src='https://b.zmtcdn.com/data/collections/3cdfc1b02649e137de21fdb544e41c38_1536122341.jpg?output-format=webp&output-quality=45'
+  width='400px'
+  height='244px'
+  doPreload
+/>
+```
+
+### Props
+
+`imgSrc: string` Image Source to load.
+
+`imgAlt: string required` alt attribute of the image.
+
+`width: string` width of the image.
+
+`height: string` height of the image. By default it takes `auto`. Need to specify height in case of using shimmer and not base64 image.
+
+`base64: string` Base64 link of the shimmer image. Shows base64 instead of shimmer when url is provided.
+
+`burred: string` takes the lower quality image & shows it until the main image is loaded.
+
+`ratio: number` The intersection ratio, in which the image would be loaded. `ratio={0.5}` means the image would be loaded when 50% of the component is visible in the viewport. By default the image is loaded as soon as the component enters the viewport.
+
+`container: node` The element that is used as the viewport for checking visiblity of the target. Must be the ancestor of the target. Defaults to the browser viewport if not specified or if null.
+
+`doPreload: bool` set to true if the image needs to be loaded as soon as it is mounted.
+
+`clickable: bool` set to true if the image needs transition before clicking.
+
+Scroll the page to check the lazy effect.
