@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -44,6 +43,7 @@ Mark.Element = styled.mark`
 
 Mark.propTypes = {
   type: PropTypes.oneOf(['bg', 'text', 'strikethrough']),
+  children: PropTypes.node,
 };
 
 Mark.defaultProps = {
