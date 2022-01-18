@@ -1,7 +1,6 @@
 {
-  "name": "sushiweb-core",
+  "name": "@sushiweb/core",
   "version": "1.0.0",
-  "private": true,
   "description": "Zomato's web UI components in react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
