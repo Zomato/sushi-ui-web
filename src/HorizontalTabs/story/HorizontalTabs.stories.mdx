@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/addon-docs';
+import HorizontalTabs from '../HorizontalTabs';
+import { HorizontalStory } from './story';
+
+<Meta title='HorizontalTabs' component={HorizontalTabs} />
+
+```jsx
+import HorizontalTabs from 'sushiweb/core/HorizontalTabs';
+```
+
+<HorizontalStory />
+
+```jsx
+<HorizontalTabs
+  alignLinks='left'
+  additionalGap='1.8rem'
+  bottomBorder
+  appearance='bold'
+>
+  <HorizontalTabs.Link active={activeIndex == 0} onClick={handleClick(0)}>
+    Tab 1
+  </HorizontalTabs.Link>
+  <HorizontalTabs.Link active={activeIndex == 1} onClick={handleClick(1)}>
+    Tab 2
+  </HorizontalTabs.Link>
+  <HorizontalTabs.Link active={activeIndex == 2} onClick={handleClick(2)}>
+    Tab 3
+  </HorizontalTabs.Link>
+  <HorizontalTabs.Link active={activeIndex == 3} onClick={handleClick(3)}>
+    Tab 4
+  </HorizontalTabs.Link>
+  <HorizontalTabs.Link active={activeIndex == 4} onClick={handleClick(4)}>
+    Tab 5
+  </HorizontalTabs.Link>
+  <HorizontalTabs.Link active={activeIndex == 5} onClick={handleClick(5)}>
+    Tab 6
+  </HorizontalTabs.Link>
+</HorizontalTabs>
+```

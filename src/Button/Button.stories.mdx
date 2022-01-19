@@ -1,0 +1,446 @@
+import Button from './Button';
+import { Meta } from '@storybook/addon-docs';
+import Stack, { Wrapper } from '../helpers/story-stack';
+import Example from '../helpers/story-example';
+import StarEmpty from '../Icons/all/StarEmpty';
+import CurrentLocation from '../Icons/all/CurrentLocation';
+import Moon from '../Icons/all/Moon';
+import RightTriangle from '../Icons/all/RightTriangle';
+import Location from '../Icons/all/Location';
+import Pause from '../Icons/all/Pause';
+import red from '../tokens/color/red';
+
+<Meta title='Button' component={Button} />
+
+```jsx
+import Button from 'sushiweb/core/Button';
+```
+
+### Button variants
+
+<br />
+
+#### Default
+
+<br />
+<Wrapper>
+  <Button btnColor='purple'>Button</Button>
+  <Button appearance='outline' btnColor='blue'>
+    blue
+  </Button>
+  <Button btnColor='red'>red</Button>
+  <Button appearance='outline' btnColor='red'>
+    red
+  </Button>
+  <Button appearance='outline' btnColor='green'>
+    green
+  </Button>
+  <Button appearance='link' btnColor='green'>
+    Link
+  </Button>
+</Wrapper>
+
+```jsx
+<Button btnColor='purple'>Button</Button>
+<Button appearance='outline' btnColor='blue'>
+  blue
+</Button>
+<Button btnColor='red'>red</Button>
+<Button appearance='outline' btnColor='red'>
+  red
+</Button>
+<Button appearance='outline' btnColor='green'>
+  green
+</Button>
+<Button appearance='link' btnColor='green'>
+  Link
+</Button>
+```
+
+#### Sizes
+
+<br />
+<Example title='Solid Buttons'>
+  <Stack align='space-between'>
+    <Button btnColor='red' size='large'>
+      large Button
+    </Button>
+    <Button btnColor='red'>Default</Button>
+    <Button btnColor='red' size='compressed'>
+      compressed
+    </Button>
+    <Button btnColor='red' size='small'>
+      small
+    </Button>
+  </Stack>
+</Example>
+<Example title='Outlined Buttons'>
+  <Stack align='space-between'>
+    <Button
+      btnColor='red'
+      size='large'
+      appearance='outline'
+      icon={<RightTriangle />}
+      iconAlign='right'
+    >
+      large Button
+    </Button>
+    <Button btnColor='red' appearance='outline'>
+      Default
+    </Button>
+    <Button
+      btnColor='red'
+      appearance='link'
+      icon={<RightTriangle />}
+      iconAlign='right'
+      size='default'
+      iconSize={14}
+    >
+      Read More
+    </Button>
+    <Button
+      btnColor='red'
+      size='small'
+      appearance='outline'
+      icon={<StarEmpty />}
+      loading
+    />
+  </Stack>
+</Example>
+
+```jsx
+<Button btnColor='red' size='large'>
+      large Button
+</Button>
+<Button btnColor='red'>Default</Button>
+<Button btnColor='red' size='compressed'>
+  compressed
+</Button>
+<Button btnColor='red' size='small'>
+  small
+</Button>
+<Button
+  btnColor='red'
+  size='large'
+  appearance='outline'
+  icon={<RightTriangle />}
+  iconAlign='right'
+>
+  large Button
+</Button>
+<Button btnColor='red' appearance='outline'>
+  Default
+</Button>
+<Button
+  btnColor='red'
+  appearance='link'
+  icon={<RightTriangle />}
+  iconAlign='right'
+  size='default'
+  iconSize={14}
+>
+  Read More
+</Button>
+<Button
+  btnColor='red'
+  size='small'
+  appearance='outline'
+  icon={<StarEmpty />}
+  loading
+/>
+```
+
+#### Disabled
+
+<br />
+<Example>
+  <Stack>
+    <Button disabled btnColor='purple'>
+      Button
+    </Button>
+    <Button appearance='outline' disabled btnColor='blue'>
+      blue
+    </Button>
+    <Button disabled btnColor='red'>
+      red
+    </Button>
+    <Button appearance='outline' disabled btnColor='yellow'>
+      yellow
+    </Button>
+    <Button appearance='outline' disabled btnColor='blue'>
+      blue
+    </Button>
+  </Stack>
+</Example>
+
+```jsx
+<Button disabled btnColor='purple'>
+  Button
+</Button>
+<Button appearance='outline' disabled btnColor='blue'>
+  blue
+</Button>
+<Button disabled btnColor='red'>
+  red
+</Button>
+<Button appearance='outline' disabled btnColor='yellow'>
+  yellow
+</Button>
+<Button appearance='outline' disabled btnColor='blue'>
+  blue
+</Button>
+```
+
+#### Loading
+
+<br />
+<Example>
+  <Stack>
+    <Button loading btnColor='purple'>
+      Button
+    </Button>
+    <Button appearance='outline' loading btnColor='blue'>
+      blue
+    </Button>
+    <Button loading btnColor='yellow'>
+      yellow
+    </Button>
+    <Button appearance='outline' loading btnColor='red'>
+      red
+    </Button>
+    <Button appearance='outline' loading btnColor='green'>
+      green
+    </Button>
+  </Stack>
+</Example>
+
+```jsx
+<Button loading btnColor='purple'>
+  Button
+</Button>
+<Button appearance='outline' loading btnColor='blue'>
+  blue
+</Button>
+<Button loading btnColor='yellow'>
+  yellow
+</Button>
+<Button appearance='outline' loading btnColor='red'>
+  red
+</Button>
+<Button appearance='outline' loading btnColor='green'>
+  green
+</Button>
+```
+
+#### Icons
+
+<br />
+<Example title='Icon on Left'>
+  <Stack>
+    <Button btnColor='purple' icon={<StarEmpty />} fontSize='1.8'>
+      Button
+    </Button>
+    <Button appearance='outline' btnColor='blue' icon={<Moon />}>
+      blue
+    </Button>
+    <Button btnColor='yellow' icon={<Location />}>
+      yellow
+    </Button>
+    <Button appearance='outline' btnColor='red' icon={<Location />}>
+      red
+    </Button>
+    <Button appearance='outline' btnColor='green' icon={<StarEmpty />}>
+      green
+    </Button>
+  </Stack>
+</Example>
+<Example title='Icon on right'>
+  <Stack align='space-between'>
+    <Button btnColor='purple' icon={<StarEmpty />} iconAlign='right'>
+      Button
+    </Button>
+    <Button
+      appearance='outline'
+      btnColor='blue'
+      icon={<Moon />}
+      iconAlign='right'
+    >
+      blue
+    </Button>
+    <Button btnColor='yellow' icon={<Location />} iconAlign='right'>
+      yellow
+    </Button>
+    <Button
+      appearance='outline'
+      btnColor='red'
+      icon={<Location />}
+      iconAlign='right'
+    >
+      red
+    </Button>
+    <Button
+      appearance='outline'
+      btnColor='green'
+      icon={<StarEmpty />}
+      iconAlign='right'
+    >
+      green
+    </Button>
+    <Button
+      icon={<CurrentLocation />}
+      iconSize='18'
+      appearance='locateMe'
+      size='largeIcon'
+    >
+      Locate Me
+    </Button>
+  </Stack>
+</Example>
+
+```jsx
+<Button btnColor='purple' icon={<StarEmpty />} fontSize='1.8'>
+  Button
+</Button>
+<Button appearance='outline' btnColor='blue' icon={<Moon />}>
+  blue
+</Button>
+<Button btnColor='yellow' icon={<Location />}>
+  yellow
+</Button>
+<Button appearance='outline' btnColor='red' icon={<Location />}>
+  red
+</Button>
+<Button appearance='outline' btnColor='green' icon={<StarEmpty />}>
+  green
+</Button>
+<Button btnColor='purple' icon={<StarEmpty />} iconAlign='right'>
+  Button
+</Button>
+<Button
+  appearance='outline'
+  btnColor='blue'
+  icon={<Moon />}
+  iconAlign='right'
+>
+  blue
+</Button>
+<Button btnColor='yellow' icon={<Location />} iconAlign='right'>
+  yellow
+</Button>
+<Button
+  appearance='outline'
+  btnColor='red'
+  icon={<Location />}
+  iconAlign='right'
+>
+  red
+</Button>
+<Button
+  appearance='outline'
+  btnColor='green'
+  icon={<StarEmpty />}
+  iconAlign='right'
+>
+  green
+</Button>
+<Button
+  icon={<CurrentLocation />}
+  iconSize='18'
+  appearance='locateMe'
+  size='largeIcon'
+>
+  Locate Me
+</Button>
+```
+
+#### Colors
+
+<br />
+<Example title='Solid Buttons'>
+  <Stack align='fill'>
+    <Button>Default</Button>
+    <Button btnColor='green'>green</Button>
+    <Button btnColor='blue'>blue</Button>
+    <Button btnColor='yellow'>yellow</Button>
+    <Button btnColor='purple'>purple</Button>
+    <Button btnColor='lime'>lime</Button>
+    <Button btnColor='coal'>coal</Button>
+    <Button btnColor='chalk'>chalk</Button>
+  </Stack>
+</Example>
+<Example title='outlined Buttons'>
+  <Stack align='fill'>
+    <Button>Default</Button>
+    <Button btnColor='red' appearance='outline'>
+      red
+    </Button>
+    <Button btnColor='green' appearance='outline'>
+      green
+    </Button>
+    <Button btnColor='blue' appearance='outline'>
+      blue
+    </Button>
+    <Button btnColor='yellow' appearance='outline'>
+      yellow
+    </Button>
+    <Button btnColor='purple' appearance='outline'>
+      purple
+    </Button>
+    <Button btnColor='lime' appearance='outline'>
+      lime
+    </Button>
+    <Button btnColor='coal' appearance='outline'>
+      coal
+    </Button>
+  </Stack>
+</Example>
+
+```jsx
+<Button>Default</Button>
+<Button btnColor='green'>green</Button>
+<Button btnColor='blue'>blue</Button>
+<Button btnColor='yellow'>yellow</Button>
+<Button btnColor='purple'>purple</Button>
+<Button btnColor='lime'>lime</Button>
+<Button btnColor='coal'>coal</Button>
+<Button btnColor='chalk'>chalk</Button>
+<Button>Default</Button>
+<Button btnColor='red' appearance='outline'>
+  red
+</Button>
+<Button btnColor='green' appearance='outline'>
+  green
+</Button>
+<Button btnColor='blue' appearance='outline'>
+  blue
+</Button>
+<Button btnColor='yellow' appearance='outline'>
+  yellow
+</Button>
+<Button btnColor='purple' appearance='outline'>
+  purple
+</Button>
+<Button btnColor='lime' appearance='outline'>
+  lime
+</Button>
+<Button btnColor='coal' appearance='outline'>
+  coal
+</Button>
+```
+
+#### Ripple
+
+<br />
+<Example title='Simulate mobile device to see the ripple effect'>
+  <Stack align='fill'>
+    <Button>Solid</Button>
+    <Button appearance='outline'>Outline</Button>
+    <Button preventRipple>Prevent Ripple</Button>
+  </Stack>
+</Example>
+
+```jsx
+<Button>Solid</Button>
+<Button appearance='outline'>Outline</Button>
+<Button preventRipple>Prevent Ripple</Button>
+```

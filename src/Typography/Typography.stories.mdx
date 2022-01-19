@@ -1,0 +1,171 @@
+import { Meta } from '@storybook/addon-docs';
+import H1 from './Heading/H1';
+import H2 from './Heading/H2';
+import H3 from './Heading/H3';
+import H4 from './Heading/H4';
+import H5 from './Heading/H5';
+import H6 from './Heading/H6';
+import { Mark, P, Strong, Underline } from './index';
+import Link from './../Link';
+import RightTriangle from './../Icons/all/RightTriangle';
+import red from '../tokens/color/red';
+import LeftTriangle from './../Icons/all/LeftTriangle';
+
+<Meta title='Typography' component={H1} />
+
+### Headings
+
+```jsx
+import H1 from 'sushiweb/core/Typography/Heading/H1';
+```
+
+<H1>This is H1 Heading</H1>
+<H2>This is H2 Heading</H2>
+<H3>This is H3 Heading</H3>
+<H4>This is H4 Heading</H4>
+<H5>This is H5 Heading</H5>
+<H6>This is H6 Heading</H6>
+
+```js
+<H1>This is H1 Heading</H1>
+<H2>This is H2 Heading</H2>
+<H3>This is H3 Heading</H3>
+<H4>This is H4 Heading</H4>
+<H5>This is H5 Heading</H5>
+<H6>This is H6 Heading</H6>
+```
+
+### Text variants
+
+```js
+import { Mark, P, Strong, Underline } from 'sushiweb/core/Typography';
+```
+
+#### P, String, Underline
+
+<br />
+<Example>
+  <P>
+    A Wolverine Beer dies, and a Dos Equis leaves; however, the Strohs
+    caricatures the unstable miller. For example, some green{' '}
+    <Strong>Strong</Strong> Hoptoberfest indicates that a dude lazily can be
+    kind to some Fraoch Heather Ale. Some feline{' '}
+    <Underline>Citra Ninja </Underline>is tooled. Any Amarillo Pale Ale can
+    thoroughly laugh and drink all night with a false , but it takes a real Long
+    Trail Ale to dance with a colt 45. A stupid Brewers Reserve accidentally
+    goes deep sea fishing with a ravishing Left Hand Milk Stout.
+    <Link linkTo='#google' color={red.z400}>
+      Read More <RightTriangle color={red.z400} size={12} />
+    </Link>
+  </P>
+</Example>
+
+```jsx
+<P>
+  A Wolverine Beer dies, and a Dos Equis leaves; however, the Strohs caricatures
+  the unstable miller. For example, some green <Strong>Strong</Strong>{' '}
+  Hoptoberfest indicates that a dude lazily can be kind to some Fraoch Heather
+  Ale. Some feline <Underline>Citra Ninja </Underline>is tooled. Any Amarillo
+  Pale Ale can thoroughly laugh and drink all night with a false , but it takes
+  a real Long Trail Ale to dance with a colt 45. A stupid Brewers Reserve
+  accidentally goes deep sea fishing with a ravishing Left Hand Milk Stout.
+  <Link linkTo='#google' color={red.z400}>
+    Read More <RightTriangle color={red.z400} size={12} />
+  </Link>
+</P>
+```
+
+#### Mark
+
+<br />
+<Example>
+  <P>
+    A Wolverine Beer dies, and a Dos Equis leaves; however, the Strohs
+    caricatures the unstable miller. For example, some green Hoptoberfest
+    indicates that a dude lazily can be kind to some Fraoch Heather Ale.{' '}
+    <Mark type='bg'>highlighted mark</Mark>Some feline Citra Ninja is tooled.
+    Any Amarillo Pale Ale can thoroughly laugh and drink all night with a false
+    <Mark>default mark</Mark> , but it takes a real Long Trail Ale to dance with
+    a colt 45. A stupid Brewers Reserve
+    <Mark type='strikethrough'>Striked mark</Mark> goes deep sea fishing with a
+    ravishing Left Hand Milk Stout.
+  </P>
+</Example>
+
+```jsx
+<P>
+  A Wolverine Beer dies, and a Dos Equis leaves; however, the Strohs caricatures
+  the unstable miller. For example, some green Hoptoberfest indicates that a
+  dude lazily can be kind to some Fraoch Heather Ale.{' '}
+  <Mark type='bg'>highlighted mark</Mark>Some feline Citra Ninja is tooled. Any
+  Amarillo Pale Ale can thoroughly laugh and drink all night with a false{' '}
+  <Mark>default mark</Mark> , but it takes a real Long Trail Ale to dance with a
+  colt 45. A stupid Brewers Reserve
+  <Mark type='strikethrough'>Striked mark</Mark> goes deep sea fishing with a ravishing
+  Left Hand Milk Stout.
+</P>
+```
+
+### Link
+
+```js
+import Link from 'sushiweb/core/Link';
+```
+
+<Example>
+  <P>
+    A Wolverine Beer dies, and a Dos Equis leaves; however, the Strohs
+    caricatures the unstable miller. For example, some green
+  </P>
+  <Link
+    linkTo='https://www.zomato.com/about'
+    color={red.z400}
+    target='_blank'
+    iconRight
+    iconProps={{ size: 12, color: red.z400 }}
+    icon={RightTriangle}
+  >
+    Read More
+  </Link>
+  <div>
+    <Link
+      linkTo='https://www.zomato.com/about'
+      color={red.z400}
+      target='_blank'
+      iconLeft
+      iconProps={{ size: 12, color: red.z400 }}
+      icon={LeftTriangle}
+    >
+      Read More
+    </Link>
+  </div>
+</Example>
+
+```js
+<P>
+  A Wolverine Beer dies, and a Dos Equis leaves; however, the Strohs
+  caricatures the unstable miller. For example, some green
+</P>
+<Link
+  linkTo='https://www.zomato.com/about'
+  color={red.z400}
+  target='_blank'
+  iconRight
+  iconProps={{ size: 12, color: red.z400 }}
+  icon={RightTriangle}
+>
+  Read More
+</Link>
+<div>
+  <Link
+    linkTo='https://www.zomato.com/about'
+    color={red.z400}
+    target='_blank'
+    iconLeft
+    iconProps={{ size: 12, color: red.z400 }}
+    icon={LeftTriangle}
+  >
+    Read More
+  </Link>
+</div>
+```
