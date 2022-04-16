@@ -1,9 +1,11 @@
-# sushi-web
+# sushi-ui-web
 
 ### Getting started
 
 ```jsx
-npm install --save @sushiweb/core
+- This project uses github package registry to publish package
+- Check `.npmrc` file in the project directory. Replace the value of `_authToken` with the github personal access token having `read:packages` permission enabled
+- npm install --save @zomato/sushi-ui-web
 ```
 
 ### How to check components documentation?
