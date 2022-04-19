@@ -23,7 +23,7 @@
     "format": "prettier \"src/**/*.js\" --write",
     "generate-icons": "node ./buildHelpers/generate-SVG.js && npm run format",
     "copy": "cp package.json dist/ && cp README.md dist/",
-    "build": "npm run generate-icons && babel ./src --out-dir ./dist && npm run copy",
+    "build": "babel ./src --out-dir ./dist && npm run copy",
     "publish:npm": "cd ./dist/ && npm publish"
   },
   "eslintConfig": {
