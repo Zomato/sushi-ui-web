@@ -20,4 +20,4 @@
 - Run `npm install`
 - Run `npm run storybook`
 
-A browser window will open that contains documentaion of every sushi web component
+A browser window will open that contains documentation of every sushi web component
