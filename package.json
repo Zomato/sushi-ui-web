@@ -1,6 +1,6 @@
 {
   "name": "@zomato/sushi-ui-web",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Zomato's web UI components in react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
@@ -13,7 +13,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
-    "styled-components": "^5.3.3",
+    "styled-components": "^4.3.2",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
