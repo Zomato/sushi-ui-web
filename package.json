@@ -1,6 +1,6 @@
 {
   "name": "@zomato/sushi-ui-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Zomato's web UI components in react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
@@ -42,18 +42,9 @@
       }
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": [
+    "since 2017-06"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.16.7",
     "@babel/core": "^7.16.7",
