@@ -1,21 +1,8 @@
 {
   "name": "@zomato/sushi-ui-web",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Zomato's web UI components in react",
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "cuid": "^2.1.8",
-    "glob": "^8.0.1",
-    "lodash-es": "^4.17.21",
-    "parse5": "^6.0.1",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-scripts": "5.0.0",
-    "styled-components": "^4.3.2",
-    "web-vitals": "^2.1.2"
-  },
+  "dependencies": {},
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
@@ -67,11 +54,19 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.28.0",
     "husky": "^7.0.4",
+    "react-scripts": "5.0.0",
     "lint-staged": "^12.1.4",
     "prettier": "^2.5.1",
     "storybook-readme": "^5.0.9",
     "strip-html-comments": "^1.0.0",
-    "webpack": "^5.65.0"
+    "webpack": "^5.65.0",
+    "cuid": "^2.1.8",
+    "glob": "^8.0.1",
+    "lodash-es": "^4.17.21",
+    "parse5": "^6.0.1",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "styled-components": "^4.3.2"
   },
   "husky": {
     "hooks": {
